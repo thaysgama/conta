@@ -10,7 +10,7 @@ public class ContaCorrente extends Conta {
         return this.chequeEspecial + this.saldo;
     }
 
-    public boolean getSaque(int valor){
+    public boolean getSaque(double valor){
         if (valor > getSaldo()) {
             System.out.println("Operação saque falhou.");
             System.out.println("Seu saldo é insuficiente para efetuar essa transação.");
@@ -22,14 +22,6 @@ public class ContaCorrente extends Conta {
             System.out.println("O saldo atualizado da conta é R$" + saldo);
             return true;
         }
-    }
-
-    public boolean getDeposito (int valor) {
-        saldo += valor;
-        System.out.println("Depósito feito com sucesso");
-        System.out.println("Você depositou R$" + valor);
-        System.out.println("O saldo atualizado da conta é R$" + saldo);
-        return true;
     }
 
     @Override

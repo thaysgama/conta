@@ -3,8 +3,8 @@ public abstract class Conta {
     private int agencia;
     private String banco;
     protected double saldo;
-    protected int saque;
-    protected int deposito;
+    protected double saque;
+    protected double deposito;
 
 
     public int getNumero() {
@@ -37,15 +37,21 @@ public abstract class Conta {
         this.saldo = saldo;
     }
 
-    public abstract boolean getSaque(int valor);
+    public abstract boolean getSaque(double valor);
 
-    public void setSaque(int saque) {
+    public void setSaque(double saque) {
         this.saque = saque;
     }
 
-    public abstract boolean getDeposito(int valor);
+    public boolean getDeposito(double valor){
+        saldo += valor;
+        System.out.println("Depósito feito com sucesso");
+        System.out.println("Você depositou R$" + valor);
+        System.out.println("O saldo atualizado da conta é R$" + saldo);
+        return true;
+    };
 
-    public void setDeposito(int deposito) {
+    public void setDeposito(double deposito) {
         this.deposito = deposito;
     }
 
@@ -65,6 +71,6 @@ public abstract class Conta {
                 ", saldo=" + saldo +
                 '}';
     }
-    
+
 }
 
