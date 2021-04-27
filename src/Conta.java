@@ -65,24 +65,6 @@ public abstract class Conta {
                 ", saldo=" + saldo +
                 '}';
     }
-
-//    public void saque (int valor) {
-//        if (valor > getSaldo()) {
-//            System.out.println("Operação saque falhou.");
-//            System.out.println("Seu saldo é insuficiente para efetuar essa transação.");
-//        } else {
-//            saldo -= valor;
-//            System.out.println("Saque feito com sucesso");
-//            System.out.println("Você sacou R$" + valor);
-//            System.out.println("O saldo atualizado da conta é R$" + saldo);
-//        }
-//    }
-
-//    public void deposito (int valor) {
-//        saldo += valor;
-//        System.out.println("Depósito feito com sucesso");
-//        System.out.println("Você depositou R$" + valor);
-//        System.out.println("O saldo atualizado da conta é R$" + saldo);
-//    }
+    
 }
 
