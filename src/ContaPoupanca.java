@@ -35,7 +35,7 @@ public class ContaPoupanca extends Conta {
             System.out.println("Seu saldo é insuficiente para efetuar essa transação.");
             return false;
         } else {
-            saldo -= valor;
+            saldo = getSaldo() - valor;
             System.out.println("Saque feito com sucesso");
             System.out.println("Você sacou R$" + valor);
             System.out.println("O saldo atualizado da conta é R$" + saldo);
