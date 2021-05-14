@@ -20,7 +20,6 @@ public class ContaPoupanca extends Conta {
         LocalDate localDateAniversario = LocalDate.parse(dataAniversario, DateTimeFormatter.ISO_DATE);
         LocalDate localDateDia = LocalDate.parse(dataDia, DateTimeFormatter.ISO_DATE);
         long diff = ChronoUnit.MONTHS.between(localDateAniversario.withDayOfMonth(1), localDateDia.withDayOfMonth(1));
-        DecimalFormat df = new DecimalFormat("0.00");
         if (localDateDia.isBefore(localDateAniversario.plusMonths(1))){
             return this.saldo;
         } else {
